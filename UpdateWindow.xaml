@@ -1,0 +1,19 @@
+﻿<Window x:Class="tyaf.UpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tyaf"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Обновить данные" Height="132.179" Width="300" ResizeMode="NoResize">
+        <Grid>
+            <StackPanel Margin="5 5 5 5">
+            <TextBox x:Name="textBoxNumber" materialDesign:HintAssist.Hint="Введите номер студента" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+            <Grid Margin="0 5 0 0">
+                <Button Content="Ок" HorizontalAlignment="Left" BorderBrush="Gray" Background="Gray" Click="Button_Click_Accept"/>
+                <Button Content="Отмена" HorizontalAlignment="Right" BorderBrush="Gray" Background="Gray" Click="Button_Click_Cancel"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

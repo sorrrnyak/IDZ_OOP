@@ -1,0 +1,32 @@
+﻿<Window x:Class="tyaf.NewObjects"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:local="clr-namespace:tyaf"
+ mc:Ignorable="d"
+ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+ Title="Редактирование профиля" Height="650" Width="800"
+ResizeMode="NoResize">
+    <Grid Background="#B0B0B0">
+        <Border MinWidth="400" Margin="15" Background="#FFFAFA"
+VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="Gray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Добавление нового объекта" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <TextBox x:Name="textBoxLastName" materialDesign:HintAssist.Hint="Фамилия" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxFirstName" materialDesign:HintAssist.Hint="Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxPhone" materialDesign:HintAssist.Hint="Номер телефона" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxFaculty" materialDesign:HintAssist.Hint="Факультет" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxGroup" materialDesign:HintAssist.Hint="Группа" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Grid Margin="0 10 0 0">
+                    <Button Click="Button_Click_Save" HorizontalAlignment="Left" Content="Сохранить изменения" BorderBrush="Gray" Background="Gray" Cursor="Hand"/>
+                    <Button Click="Button_Click_Back" HorizontalAlignment="Right" BorderBrush="Gray" Content="Вернуться в профиль" Background="Gray"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="tyaf.spisok_chelikov"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:tyaf"
+        
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Личный кабинет пользователя" Height="600" Width="1100" ResizeMode="NoResize">
+    <Grid Background="#B0B0B0">
+        <Border MinWidth="400" Margin="15" Background="#FFFAFA" VerticalAlignment="Center" Padding="30" MaxWidth="1050" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="Gray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Личный кабинет" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Button Click="Button_Click_AuthWindow" Content="Выйти из личного кабинета" Margin="10" Style="{StaticResource MaterialDesignFlatButton}"/>
+                <ListView x:Name="listOfParameters" Margin="0 0 0 10" FontSize="14">
+                    <ListView.View>
+                        <GridView x:Name="GridString">
+                            <GridViewColumn DisplayMemberBinding="{Binding id_object}">
+                                <TextBlock Text="№ Студента" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.476,0.417" Height="23" Width="108"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Last_name}">
+                                <TextBlock Text="Фамилия" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding First_name}">
+                                <TextBlock Text="Имя" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Email}">
+                                <TextBlock Text="e-mail" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Phone}">
+                                <TextBlock Text="Номер телефона" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Faculty}">
+                                <TextBlock Text="Факультет" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Stud_group}">
+                                <TextBlock Text="Группа" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding id_owner}">
+                                <TextBlock Text="Номер пользователя" FontWeight="Bold" FontSize="16"/>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Grid Margin="0 0 0 20">
+                    <Button Click="Button_Click_Delete_Profile" BorderBrush="Gray" Background="Gray" HorizontalAlignment="Left" Content="Удалить аккаунт"  Cursor="Hand" Margin="197,0,0,0"/>
+                    <Button Click="Button_Click_Delete_Objects" BorderBrush="Gray" Background="Gray" HorizontalAlignment="Right" Content="Удалить пользователя"  Cursor="Hand"/>
+                    <Button Click="Button_Click_1" HorizontalAlignment="Left" BorderBrush="Gray" Background="Gray" Content="Редактировать профиль" Cursor="Hand"/>
+                    <Button Click="Button_Click_New_Objects" HorizontalAlignment="Left" BorderBrush="Gray" Background="Gray" Content="Добавить нового пользователя" Cursor="Hand" Margin="567,0,0,0"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
+
+
